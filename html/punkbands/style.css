@@ -77,7 +77,7 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr:nth-child(even) {
-    back-ground-color: #e495e4;
+    background-color: #e495e4;
 }
 
 tbody tr {
