@@ -38,7 +38,7 @@
 
       const btn = document.querySelector('button');
       
-      function displayMessage() {
+      function displayMessage(msgText, msgType) {
           const html = document.querySelector('html');
 
 	  const panel = document.createElement('div');
@@ -60,7 +60,9 @@
 
       displayMessage();
 	    
-      btn.onclick = displayMessage;
+      btn.onclick = function() {
+	      displayMessage('Woo, this is a different message!');
+      }
       
     </script>
   </body>
