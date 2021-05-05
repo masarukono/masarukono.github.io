@@ -5,7 +5,7 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Looping through images */
-displayedImage.setAttribute('src', 'images/pic' + 5 + '.jpg');
+displayedImage.setAttribute('src', 'images/pic5.jpg');
 
 for (let i = 1; i < 6; i++) {
     const newImage = document.createElement('img');
@@ -16,10 +16,16 @@ for (let i = 1; i < 6; i++) {
 	displayedImage.setAttribute('src', 'images/pic' + i + '.jpg');
     }
 }
-/*
-thumbBar.onclick = function() {
-    const src = thumBar.getAttribute('src');
-    displayedImage.setAttribute('src', src);
-}
-*/
+
 /* Wiring up the Darken/Lighten button */
+
+btn.onclick = function() {
+    const action = btn.getArrtibute('class');
+    if (action === 'dark') {
+	btn.setAttribute('class', 'light');
+	btn.textContent = 'Lighten';
+    } else {
+	btn.setAttribute('class', 'dark');
+	btn.textContent = 'Darken';
+    }
+}
