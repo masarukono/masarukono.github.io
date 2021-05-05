@@ -5,7 +5,9 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Looping through images */
-displayedImage.setAttribute('src', 'images/pic5.jpg');
+//displayedImage.setAttribute('src', 'images/pic5.jpg');
+btn.setAttribute('class', 'light');
+btn.textContent = 'Lighten';
 
 for (let i = 1; i < 6; i++) {
     const newImage = document.createElement('img');
