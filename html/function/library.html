@@ -26,6 +26,10 @@
     function cubed(num) {
 	return num * num * num;
     }
+    
+    function sqrt(num) {
+	return Math.sqrt(num);
+    }
 
     function factorial(num) {
 	if (num < 0) return undefined;
@@ -40,8 +44,8 @@
 
     input.onchange = function() {
 	const num = input.value;
-	if (isNaN(num)) {
-	    para.textContent = 'You need to enter a number!';
+	if (isNaN(num) || num < 0) {
+	    para.textContent = 'You need to enter a non-negative number!';
 	} else {
 	    para.textContent = num + ' squared is ' + squared(num) + '. ' +
 		num + ' cubed is ' + cubed(num) + '. ' +
