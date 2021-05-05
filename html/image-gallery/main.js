@@ -7,7 +7,7 @@ const overlay = document.querySelector('.overlay');
 /* Looping through images */
 
 function imgNo(i) {
-    return 'images/pic' + i.string() + '.jpg';
+    return 'images/pic' + i + '.jpg';
 }
 
 for (let i = 1; i < 6; i++) {
