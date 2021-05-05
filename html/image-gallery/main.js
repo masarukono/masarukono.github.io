@@ -18,7 +18,7 @@ for (let i = 1; i < 6; i++) {
 }
 
 thumbBar.onclick = function() {
-    const src = getAttribute('src');
+    const src = thumBar.getAttribute('src');
     displayedImage.setAttribute('src', src);
 }
 
