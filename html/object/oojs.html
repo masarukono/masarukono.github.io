@@ -11,18 +11,40 @@
   </body>
 
   <script>
-    const person = {
-	name: ['Bob', 'Smith'],
-	age: 32,
-	gender: 'male',
-	interests: ['music', 'skiing'],
-	bio: function() {
-	    alert(this.name[0] + ' ' + this.name{1] + ' is ' + this.age + ' years old.'};
-	},
-	greeting: function() {
-	    alert('Hi! I\'m ' + this.name[0] + '.');
+    function Person(first, last, age, gender, interests) {
+	this.name = {
+	    first : first,
+	    last : last
+	};
+	this.age = age;
+	this.gender = gender;
+	this.interests = interests;
+	let pronoun;
+	if (this.gender === 'male') {
+	    pronoun = 'He';
+	} else if (this.gender == 'female') {
+	    pronoun = 'She';
+	} else {
+	    pronoun = 'This person';
 	}
-    };
+	let listInt = interests[0];
+	for (let i = 1; i < interests.length; i++) {
+	    if (i === interests.length-1) {
+		listInt = listInt + ' and ' + interests[i];
+	    } else {
+		listInt = listInt + ' ' + interests[i] + ',';
+	    }
+	}
+	
+	this.bio = function() {
+	    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ' + pronoun + 'likes ' + litInt + '.');
+	};
+	this.greeting = function() {
+	    alert('Hi! I\'m ' + this.name.first + '.');
+	};
+    }
+    let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+    
   </script>
 
 </html>
