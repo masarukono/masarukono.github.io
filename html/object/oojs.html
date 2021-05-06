@@ -13,8 +13,8 @@
   <script>
     function Person(first, last, age, gender, interests) {
 	this.name = {
-	    first : first,
-	    last : last
+	    'first' : first,
+	    'last' : last
 	};
 	this.age = age;
 	this.gender = gender;
@@ -43,6 +43,7 @@
 	    alert('Hi! I\'m ' + this.name.first + '.');
 	};
     }
+    
     let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
     
   </script>
