@@ -19,33 +19,41 @@
 	this.age = age;
 	this.gender = gender;
 	this.interests = interests;
-	let pronoun;
-	if (this.gender === 'male') {
-	    pronoun = 'He';
-	} else if (this.gender == 'female') {
-	    pronoun = 'She';
-	} else {
-	    pronoun = 'This person';
-	}
-	let listInt = interests[0];
-	for (let i = 1; i < interests.length; i++) {
-	    if (i === interests.length-1) {
-		listInt = listInt + ' and ' + interests[i];
-	    } else {
-		listInt = listInt + ' ' + interests[i] + ',';
-	    }
-	}
 	
 	this.bio = function() {
-	    alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ' + pronoun + 'likes ' + litInt + '.');
+	    var string = this.first + ' ' + this.last + ' is ' + this.age + ' years old.  ';
+	    var pronoun;
+	    var lgender = this.gender.toLowerCase();
+	    if (lgender === 'male' || lgender === 'm') {
+		pronoun = 'He likes ';
+	    } else if (lgender === 'female' || lgender === 'f') {
+		pronoun = 'She likes ';
+	    } else {
+		pronoun = 'They like ';
+	    }
+	    string += pronoun;
+	    if (this.interest.length == 1 {
+		string += this.interests[0] + '.';
+	    } else if (this.interest.length == 2) {
+		string += this.interests[0] + ' and ' + this.interests[1] + '.';
+	    } else {    // length is 3 or larger
+		for (let i = 0; i < this.interest.length; i++) {
+		    if (i === this.interest.length-1) {
+			string += 'and ' + this.interest[i] + '.';
+		    } else {
+			string += this.interest[i] + ', ';
+		    }
+		}
+	    }
+	    alert(string);
 	};
 	this.greeting = function() {
 	    alert('Hi! I\'m ' + this.name.first + '.');
 	};
-    }
+    };
     
     let person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
-    
+    let person2 = new Person('Tammi', 'Smith', 32, 'neutral', ['running', 'kickboxing']);
   </script>
 
 </html>
