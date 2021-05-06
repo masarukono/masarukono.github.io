@@ -34,16 +34,17 @@
 		pronoun = 'They like ';
 	    }
 	    string += pronoun;
-	    if (this.interest.length == 1 {
+	    if (this.interests.length == 1) {
 		string += this.interests[0] + '.';
-	    } else if (this.interest.length == 2) {
+	    } else if (this.interests.length == 2) {
 		string += this.interests[0] + ' and ' + this.interests[1] + '.';
-	    } else {    // length is 3 or larger
-		for (let i = 0; i < this.interest.length; i++) {
-		    if (i === this.interest.length-1) {
-			string += 'and ' + this.interest[i] + '.';
+	    } else {
+		// length is 3 or larger
+		for (let i = 0; i < this.interests.length; i++) {
+		    if (i === this.interests.length-1) {
+			string += 'and ' + this.interests[i] + '.';
 		    } else {
-			string += this.interest[i] + ', ';
+			string += this.interests[i] + ', ';
 		    }
 		}
 	    }
