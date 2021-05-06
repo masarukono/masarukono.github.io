@@ -23,7 +23,7 @@
 	this.interests = interests;
 	
 	this.bio = function() {
-	    var string = this.first + ' ' + this.last + ' is ' + this.age + ' years old.  ';
+	    var string = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old.  ';
 	    var pronoun;
 	    var lgender = this.gender.toLowerCase();
 	    if (lgender === 'male' || lgender === 'm') {
